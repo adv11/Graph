@@ -13,3 +13,4 @@ This repository consists of Graph problems which are implemented using Java.
 9) Cycle detection in undirected graph using DFS
 10) Check Bipartite graph using BFS
 11) Check Bipartite graph using DFS
+12) Cycle detection in directed graph using DFS
