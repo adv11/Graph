@@ -46,27 +46,37 @@ public class ShortestPath_undirectedGraph_withUnitWeights {
             }
         }
 
+        // Distance array : fill it with Infinity
         int[] distance = new int[numberOfNodes+1];
         Arrays.fill(distance, Integer.MAX_VALUE);
 
+        // source node
         System.out.println("Enter the source node : ");
         int sourceNode = sc.nextInt();
 
+        // method calling
         modifiedBFS(adjacencyList, sourceNode, distance);
 
+        // printing distances from the source node to the other nodes
         System.out.println("Distances of all nodes from the source node " + sourceNode + " are as following: ");
         for(int node=1 ; node<=numberOfNodes ; node++){
             System.out.println("Distance of node " + node + " from source node " + sourceNode + " is : " + distance[node]);
         }
     }
     public static void modifiedBFS(ArrayList<ArrayList<Integer>> adjacencyList, int sourceNode, int[] distance){
-        Queue<Integer> queue = new LinkedList<>();
-        queue.offer(sourceNode);
-        distance[sourceNode] = 0;
+        Queue<Integer> queue = new LinkedList<>();  // queue data structure for BFS traversal
+        queue.offer(sourceNode);    // append source node
+        distance[sourceNode] = 0;   // add distance of source node to source node as 0
 
+        // Now while queue has an element
         while (!queue.isEmpty()){
-            int currentNode = queue.poll();
+            int currentNode = queue.poll(); // current node
+
+            // now perform action for adjacent nodes of current visiting node
             for(int adjacentNode : adjacencyList.get(currentNode)){
+
+                // if the distance[currentNode] + 1 < distance[adjacentNode]
+                // then add the distance and add that adjacent node into the queue
                 if((distance[currentNode] + 1) < distance[adjacentNode]){
                     distance[adjacentNode] = distance[currentNode] + 1;
                     queue.offer(adjacentNode);
