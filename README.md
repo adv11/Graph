@@ -21,3 +21,4 @@ This repository consists of Graph problems which are implemented using Java.
 17) Shortest path in undirected graph with unit weights
 18) Shortest path in weighted DAG(Directed Acyclic Graph) 
 19) Dijkstra's Algorithm (Shortest path in undirected graph)
+20) Prim's algorithm (Brute force & Optimised approach) for MST
