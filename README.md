@@ -24,3 +24,4 @@ This repository consists of Graph problems which are implemented using Java.
 20) Prim's algorithm (Brute force & Optimised approach) for MST
 21) Disjoint set data structure implementation (will use in Kruskal's algorithm)
 22) Kruskal's algorithm for MST
+23) Bridges (Cut edges) in graph 
