@@ -26,3 +26,4 @@ This repository consists of Graph problems which are implemented using Java.
 22) Kruskal's algorithm for MST
 23) Bridges (Cut edges) in graph 
 24) Articulation point in a graph
+25) Kosaraju's Algorithm (for finding Strongly connected component)
